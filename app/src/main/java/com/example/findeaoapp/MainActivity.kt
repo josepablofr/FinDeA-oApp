@@ -22,9 +22,10 @@ class MainActivity : ComponentActivity() {
         val service = RetrofitServiceFactory.makeRetrofitService()
 
         lifecycleScope.launch {
-            val movies = service.listPopularMovies("9a2f9c1f75a525a717e5a76b81c53d32", "US")
+            val movies = service.listPopularMovies("9a2f9c1f75a525a717e5a76b81c53d32","US")
             println(movies)
         }
+
 
         setContent {
             FindeAñoAppTheme {

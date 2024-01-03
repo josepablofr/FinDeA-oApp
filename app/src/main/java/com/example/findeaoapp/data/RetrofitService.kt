@@ -8,14 +8,15 @@ import retrofit2.http.Query
 
 interface RetrofitService {
 
-    @GET ("discover/movie?sort_by=popularity.desc")
+    @GET("discover/movie?sort_by=popularity.desc")
     suspend fun listPopularMovies(
         @Query("api_key") apikey: String,
         @Query("region") region: String
     ): RemoteResult
+
 }
 
-object RetrofitServiceFactory {
+object RetrofitServiceFactory{
     fun makeRetrofitService(): RetrofitService {
         return Retrofit.Builder()
             .baseUrl("https://api.themoviedb.org/3/")
