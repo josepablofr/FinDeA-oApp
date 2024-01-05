@@ -16,7 +16,7 @@ interface RetrofitService {
 
 }
 
-object RetrofitServiceFactory{
+object RetrofitServiceFactory {
     fun makeRetrofitService(): RetrofitService {
         return Retrofit.Builder()
             .baseUrl("https://api.themoviedb.org/3/")

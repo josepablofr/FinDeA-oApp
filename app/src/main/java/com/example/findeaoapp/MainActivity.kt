@@ -26,7 +26,6 @@ class MainActivity : ComponentActivity() {
             println(movies)
         }
 
-
         setContent {
             FindeAñoAppTheme {
                 // A surface container using the 'background' color from the theme
