@@ -60,7 +60,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
-    //RETROFIT
+    // Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
 
     // GSON CONVERTER
