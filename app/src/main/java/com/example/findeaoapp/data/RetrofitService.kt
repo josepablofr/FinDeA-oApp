@@ -4,12 +4,14 @@ import com.example.findeaoapp.data.model.RemoteResult
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface RetrofitService {
 
-    @GET("discover/movie?sort_by=popularity.desc")
+    @GET("discover/movie/{type}?sort_by=popularity.desc")
     suspend fun listPopularMovies(
+        @Path("type") type: String,
         @Query("api_key") apiKey: String,
         @Query("region") region: String
     ): RemoteResult
