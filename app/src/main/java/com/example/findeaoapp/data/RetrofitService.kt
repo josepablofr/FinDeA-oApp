@@ -9,9 +9,9 @@ import retrofit2.http.Query
 
 interface RetrofitService {
 
-    @GET("discover/movie/{type}?sort_by=popularity.desc")
+    @GET("discover/movie/?sort_by=popularity.desc")
     suspend fun listPopularMovies(
-        @Path("type") type: String,
+
         @Query("api_key") apiKey: String,
         @Query("region") region: String
     ): RemoteResult
